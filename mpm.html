@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projektmenedzsment - MPM Hálótervezés Összefoglaló</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="switch">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+        </label>
+    </div>
+
+    <div class="a5-container">
+        <h1>Hálótervezés - MPM Összefoglaló</h1>
+        
+        <h2>Előnyök</h2>
+        <ul>
+            <li>Tevékenység-csomópontú háló áttekinthetősége</li>
+            <li>Komplex kapcsolattípusok kezelése (VK, KK, VV)</li>
+            <li>Erőforrás-allokáció optimalizálása</li>
+        </ul>
+
+        <h2>Alapvető elemek</h2>
+        <div class="principles">
+            <h3>Tevékenység-csomópont</h3>
+            <ul>
+                <li>Tevékenységek a csomópontokban helyezkednek el</li>
+                <li>Időigény megadása kötelező (pl. 4 nap)</li>
+                <li>Erőforrásigényt tartalmazhat</li>
+            </ul>
+
+            <h3>Kapcsolattípusok</h3>
+            <ul>
+                <li><strong>VK(t)</strong> - Vége-Kezdet: <span class="special-arrow">──▶</span> (min. t késleltetés)</li>
+                <li><strong>KK(t)</strong> - Kezdet-Kezdet: <span class="special-arrow">──▶</span> (párhuzamos indulás)</li>
+                <li><strong>VV(t)</strong> - Vége-Vége: <span class="special-arrow">──▶</span> (befejezési összefüggés)</li>
+            </ul>
+        </div>
+
+        <h2>Hálóépítési szabályok</h2>
+        <ul>
+            <li>Csomópontok egyedi azonosítói</li>
+            <li>Élek irányított nyilakkal</li>
+            <li>Követési idő megadása kötelező kapcsolatoknál</li>
+            <li>Egy kezdő- és végcsomópont</li>
+        </ul>
+
+        <h2>Tevékenységtáblázat példa</h2>
+        <table>
+            <tr>
+                <th>Tevékenység</th>
+                <th>Idő (nap)</th>
+                <th>Legkorábbi kezdés</th>
+                <th>Legkésőbbi kezdés</th>
+            </tr>
+            <tr>
+                <td>Start</td>
+                <td>-</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td>2</td>
+                <td>0</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td>4</td>
+                <td>2</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>D</td>
+                <td>5</td>
+                <td>4</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>E</td>
+                <td>6</td>
+                <td>9</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>Vége</td>
+                <td>-</td>
+                <td>15</td>
+                <td>15</td>
+            </tr>
+        </table>
+
+        <div class="source">
+            <p>Források:</p>
+            <a href="https://www.oplit.com/en/articles/la-methode-des-potentiels-metra-mpm">MPM módszer részletes leírása</a><br>
+            <a href="https://www.nive.hu/Downloads/Szakkepzesi_dokumentumok/Bemeneti_kompetenciak_meresi_ertekelesi_eszkozrendszerenek_kialakitasa/4_0688_020_101015.pdf">Szakképzési anyagok</a>
+            <p>Készült: 2024. március 3.</p>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
