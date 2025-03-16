@@ -46,6 +46,16 @@ body {
     overflow-y: auto;
 }
 
+.flexible-container {
+    width: auto;
+    height: auto;
+    border: 2px solid var(--border-color);
+    background-color: var(--container-bg);
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    overflow-y: auto;
+}
+
 h1 {
     font-size: 24px;
     text-align: center;
@@ -147,10 +157,14 @@ tr:nth-child(even) {
 }
     
 .theme-switch {
-  display: inline-block;
-  height: 34px;
-  position: relative;
-  width: 60px;
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.theme-switch-container {
+    margin-left: auto;
 }
 
 .theme-switch input {
@@ -209,4 +223,84 @@ input:checked + label:after {
     left: 490px;
     transform: translateX(-100%);
     background: linear-gradient(180deg, #777, #3a3a3a);
+}
+
+.navbar {
+    width: 100%;
+    background-color: var(--container-bg);
+    border-bottom: 2px solid var(--border-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background-color 0.3s, border-color 0.3s;
+    height: 60px;
+    display: flex;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.navbar-logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--heading-color);
+    text-decoration: none;
+    transition: color 0.3s;
+    margin-right: auto;
+}
+
+.navbar-logo:hover {
+    color: var(--link-hover-color);
+}
+
+.navbar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.navbar-menu li {
+    margin-left: 20px;
+}
+
+.navbar-menu a {
+    color: var(--font-color);
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.navbar-menu a:hover {
+    color: var(--link-hover-color);
+    background-color: var(--link-hover-bg);
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    .navbar-menu {
+        margin-top: 10px;
+    }
+
+    .navbar-menu li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
 }
