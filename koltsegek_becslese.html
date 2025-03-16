@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Költség Becslése</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;800&family=Flow+Circular&display=swap" rel="stylesheet">
+    <style>
+        .glow-card {
+            box-shadow: 0 0 40px -15px rgba(110, 231, 183, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-zinc-900">
+<nav class="fixed top-0 w-full z-50 bg-zinc-800/80 backdrop-blur-md border-b border-emerald-500/20">
+    <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-2 ml-auto pr-4">
+            <div class="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></div>
+            <span class="font-['Exo_2'] text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-cyan-400">
+                numONE
+            </span>
+        </div>
+        <div class="hidden md:flex gap-6">
+            <a href="index.html" class="text-zinc-300 hover:text-emerald-400 transition-colors font-['Exo_2'] font-medium whitespace-nowrap">Kezdőlap</a>
+            <a href="cpm.html" class="text-zinc-300 hover:text-emerald-400 transition-colors font-['Exo_2'] font-medium whitespace-nowrap">CPM</a>
+            <a href="mpm.html" class="text-emerald-400 whitespace-nowrap">MPM</a>
+            <a href="kockazatelemzes.html" class="text-zinc-300 hover:text-emerald-400 transition-colors font-['Exo_2'] font-medium whitespace-nowrap">Kockázatelemzés</a>
+            <a href="koltsegek_becslese.html" class="text-zinc-300 border-b-2 border-emerald-400 hover:text-emerald-400 transition-colors font-['Exo_2'] font-medium whitespace-nowrap">Költségek Becslése</a>
+            <a href="projektdokumentacio.html" class="text-zinc-300 hover:text-emerald-400 transition-colors font-['Exo_2'] font-medium whitespace-nowrap">Projektdokumentáció</a>
+            <a href="projekt_egyensuly.html" class="text-zinc-300 hover:text-emerald-400 transition-colors font-['Exo_2'] font-medium whitespace-nowrap">Projekt egyensúly</a>
+        </div>
+    </div>
+</nav>
+<main class="relative z-10 container mx-auto px-6 pt-24 pb-16">
+    <div class="mb-16 text-center">
+        <h1 class="text-5xl md:text-6xl font-['Exo_2'] font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-cyan-400 mb-6">
+            Költségbecslés
+        </h1>
+        <p class="text-zinc-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+            DSzC Mechwart András Gépipari és Informatikai Technikum
+        </p>
+    </div>
+    <div class="glow-card bg-zinc-800/60 p-8 rounded-3xl border border-emerald-500/20 hover:border-emerald-400/40 transition-all">
+    <section class="text-zinc-300">
+        <h1 class="text-3xl md:text-4xl font-['Exo_2'] font-bold mb-4">Költségbecslés</h1>
+        <p class="mb-6 text-lg leading-relaxed">
+            A projekttervezés egyik kulcsfontosságú eleme a várható költségek meghatározása. Az alábbi módszerek segítséget nyújtanak a pontosabb becslésben.
+        </p>
+
+        <h2 class="text-2xl md:text-3xl font-['Exo_2'] font-bold mb-3">Becslési módszerek</h2>
+        <ul class="list-disc ml-6 mb-6">
+            <li class="mb-2">
+                <strong class="text-emerald-400">Tapasztalati becslés:</strong>
+                Gyors, de kevésbé megbízható módszer, amely hozzávetőleges értékeket ad.
+            </li>
+            <li class="mb-2">
+                <strong class="text-emerald-400">Durva nagyságrendi becslés (ROM):</strong>
+                Korábbi projektek adataira épül, azonban jelentős eltéréseket mutathat.
+            </li>
+            <li class="mb-2">
+                <strong class="text-emerald-400">Részletes becslés:</strong>
+                Alapos és pontos módszer, amely figyelembe veszi az összes releváns tényezőt.
+            </li>
+        </ul>
+
+        <h2 class="text-2xl md:text-3xl font-['Exo_2'] font-bold mb-3">Szakaszos becslés</h2>
+        <p class="mb-6">
+            A projektet fázisokra bontva történik a költségbecslés, ahol minden szakasz végén felülvizsgáljuk és pontosítjuk a következő fázis költségvetését.
+        </p>
+
+        <h2 class="text-2xl md:text-3xl font-['Exo_2'] font-bold mb-3">Arányos becslés</h2>
+        <p class="mb-6">
+            A teljes projekt költségét előzetesen meghatározzuk, majd az egyes részlegekre százalékos arányban osztjuk el.
+        </p>
+
+        <h2 class="text-2xl md:text-3xl font-['Exo_2'] font-bold mb-3">Parametrikus becslés</h2>
+        <p class="mb-6">
+            Korábbi projektek tapasztalataira építve a munka egyes egységeit meghatározott szorzótényezőkkel számítjuk ki a végleges költség meghatározásához.
+        </p>
+    </section>
+    </div>
+</main>
+</body>
+</html>

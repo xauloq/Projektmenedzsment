@@ -1,113 +1,144 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projektmenedzsment - MPM Hálótervezés Összefoglaló</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projektmenedzsment - MPM Hálótervezés Összefoglaló</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;800&family=Flow+Circular&display=swap" rel="stylesheet">
+  <style>
+    .glow-card {
+      box-shadow: 0 0 40px -15px rgba(110, 231, 183, 0.3);
+    }
+  </style>
 </head>
-<body>
-    <div class="switch">
-        <label class="theme-switch" for="checkbox">
-            <input type="checkbox" id="checkbox" />
-            <div class="slider round"></div>
-        </label>
+<body class="bg-zinc-900">
+<nav class="fixed top-0 w-full z-50 bg-zinc-800/80 backdrop-blur-md border-b border-emerald-500/20">
+  <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-2 ml-auto pr-4">
+      <div class="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></div>
+      <span class="font-['Exo_2'] text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-cyan-400">
+        numONE
+      </span>
     </div>
+    <div class="hidden md:flex gap-6">
+      <a href="index.html" class="text-zinc-300 hover:text-emerald-400 transition-colors font-['Exo_2'] font-medium whitespace-nowrap">Kezdőlap</a>
+      <a href="cpm.html" class="text-zinc-300 hover:text-emerald-400 transition-colors font-['Exo_2'] font-medium whitespace-nowrap">CPM</a>
+      <a href="mpm.html" class="text-emerald-400 border-b-2 border-emerald-400 whitespace-nowrap">MPM</a>
+      <a href="kockazatelemzes.html" class="text-zinc-300 hover:text-emerald-400 transition-colors font-['Exo_2'] font-medium whitespace-nowrap">Kockázatelemzés</a>
+      <a href="koltsegek_becslese.html" class="text-zinc-300 hover:text-emerald-400 transition-colors font-['Exo_2'] font-medium whitespace-nowrap">Költségek Becslése</a>
+      <a href="projektdokumentacio.html" class="text-zinc-300 hover:text-emerald-400 transition-colors font-['Exo_2'] font-medium whitespace-nowrap">Projektdokumentáció</a>
+      <a href="projekt_egyensuly.html" class="text-zinc-300 hover:text-emerald-400 transition-colors font-['Exo_2'] font-medium whitespace-nowrap">Projekt egyensúly</a>
+    </div>
+  </div>
+</nav>
+<main class="relative z-10 container mx-auto px-6 pt-24 pb-16">
+  <div class="max-w-5xl mx-auto">
+    <div class="mb-16 text-center">
+      <h1 class="text-5xl md:text-6xl font-['Exo_2'] font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-cyan-400 mb-6">
+        MPM
+      </h1>
+      <p class="text-zinc-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+        DSzC Mechwart András Gépipari és Informatikai Technikum
+      </p>
+    </div>
+    <div class="glow-card bg-zinc-800/60 p-8 rounded-3xl border border-emerald-500/20 hover:border-emerald-400/40 transition-all">
+      <h2 class="text-emerald-400 text-2xl font-bold mb-4">Előnyök</h2>
+      <ul class="space-y-2 text-zinc-300">
+        <li>Tevékenység-csomópontú háló áttekinthetősége</li>
+        <li>Komplex kapcsolattípusok kezelése (VK, KK, VV)</li>
+        <li>Erőforrás-allokáció optimalizálása</li>
+      </ul>
 
-    <div class="a5-container">
-        <h1>Hálótervezés - MPM Összefoglaló</h1>
-        
-        <h2>Előnyök</h2>
-        <ul>
-            <li>Tevékenység-csomópontú háló áttekinthetősége</li>
-            <li>Komplex kapcsolattípusok kezelése (VK, KK, VV)</li>
-            <li>Erőforrás-allokáció optimalizálása</li>
+      <h2 class="text-emerald-400 text-2xl font-bold mt-8 mb-4">Alapvető elemek</h2>
+      <div class="principles">
+        <h3 class="text-emerald-400 text-xl font-semibold mb-2">Tevékenység-csomópont</h3>
+        <ul class="space-y-2 text-zinc-300">
+          <li>Tevékenységek a csomópontokban helyezkednek el</li>
+          <li>Időigény megadása kötelező (pl. 4 nap)</li>
+          <li>Erőforrásigényt tartalmazhat</li>
         </ul>
 
-        <h2>Alapvető elemek</h2>
-        <div class="principles">
-            <h3>Tevékenység-csomópont</h3>
-            <ul>
-                <li>Tevékenységek a csomópontokban helyezkednek el</li>
-                <li>Időigény megadása kötelező (pl. 4 nap)</li>
-                <li>Erőforrásigényt tartalmazhat</li>
-            </ul>
-
-            <h3>Kapcsolattípusok</h3>
-            <ul>
-                <li><strong>VK(t)</strong> - Vége-Kezdet: <span class="special-arrow">──▶</span> (min. t késleltetés)</li>
-                <li><strong>KK(t)</strong> - Kezdet-Kezdet: <span class="special-arrow">──▶</span> (párhuzamos indulás)</li>
-                <li><strong>VV(t)</strong> - Vége-Vége: <span class="special-arrow">──▶</span> (befejezési összefüggés)</li>
-            </ul>
-        </div>
-
-        <h2>Hálóépítési szabályok</h2>
-        <ul>
-            <li>Csomópontok egyedi azonosítói</li>
-            <li>Élek irányított nyilakkal</li>
-            <li>Követési idő megadása kötelező kapcsolatoknál</li>
-            <li>Egy kezdő- és végcsomópont</li>
+        <h3 class="text-emerald-400 text-xl font-semibold mt-6 mb-2">Kapcsolattípusok</h3>
+        <ul class="space-y-2 text-zinc-300">
+          <li><strong class="text-emerald-400">VK(t)</strong> - Vége-Kezdet: <span class="special-arrow">──▶</span> (min. t késleltetés)</li>
+          <li><strong class="text-emerald-400">KK(t)</strong> - Kezdet-Kezdet: <span class="special-arrow">──▶</span> (párhuzamos indulás)</li>
+          <li><strong class="text-emerald-400">VV(t)</strong> - Vége-Vége: <span class="special-arrow">──▶</span> (befejezési összefüggés)</li>
         </ul>
+      </div>
 
-        <h2>Tevékenységtáblázat példa</h2>
-        <table>
-            <tr>
-                <th>Tevékenység</th>
-                <th>Idő (nap)</th>
-                <th>Legkorábbi kezdés</th>
-                <th>Legkésőbbi kezdés</th>
-            </tr>
-            <tr>
-                <td>Start</td>
-                <td>-</td>
-                <td>0</td>
-                <td>0</td>
-            </tr>
-            <tr>
-                <td>A</td>
-                <td>2</td>
-                <td>0</td>
-                <td>2</td>
-            </tr>
-            <tr>
-                <td>B</td>
-                <td>4</td>
-                <td>0</td>
-                <td>0</td>
-            </tr>
-            <tr>
-                <td>C</td>
-                <td>4</td>
-                <td>2</td>
-                <td>5</td>
-            </tr>
-            <tr>
-                <td>D</td>
-                <td>5</td>
-                <td>4</td>
-                <td>4</td>
-            </tr>
-            <tr>
-                <td>E</td>
-                <td>6</td>
-                <td>9</td>
-                <td>9</td>
-            </tr>
-            <tr>
-                <td>Vége</td>
-                <td>-</td>
-                <td>15</td>
-                <td>15</td>
-            </tr>
-        </table>
+      <h2 class="text-emerald-400 text-2xl font-bold mt-8 mb-4">Hálóépítési szabályok</h2>
+      <ul class="space-y-2 text-zinc-300">
+        <li>Csomópontok egyedi azonosítói</li>
+        <li>Élek irányított nyilakkal</li>
+        <li>Követési idő megadása kötelező kapcsolatoknál</li>
+        <li>Egy kezdő- és végcsomópont</li>
+      </ul>
 
-        <div class="source">
-            <p>Források:</p>
-            <a href="https://www.oplit.com/en/articles/la-methode-des-potentiels-metra-mpm">MPM módszer részletes leírása</a><br>
-            <a href="https://www.nive.hu/Downloads/Szakkepzesi_dokumentumok/Bemeneti_kompetenciak_meresi_ertekelesi_eszkozrendszerenek_kialakitasa/4_0688_020_101015.pdf">Szakképzési anyagok</a>
-            <p>Készült: 2024. március 3.</p>
-        </div>
+      <h2 class="text-emerald-400 text-2xl font-bold mt-8 mb-4">Tevékenységtáblázat példa</h2>
+      <table class="min-w-full bg-zinc-800 text-zinc-300 border border-emerald-500/20">
+        <thead>
+        <tr>
+          <th class="px-4 py-2 border-b border-emerald-500/20">Tevékenység</th>
+          <th class="px-4 py-2 border-b border-emerald-500/20">Idő (nap)</th>
+          <th class="px-4 py-2 border-b border-emerald-500/20">Legkorábbi kezdés</th>
+          <th class="px-4 py-2 border-b border-emerald-500/20">Legkésőbbi kezdés</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td class="px-4 py-2 border-b border-emerald-500/20">Start</td>
+          <td class="px-4 py-2 border-b border-emerald-500/20">-</td>
+          <td class="px-4 py-2 border-b border-emerald-500/20">0</td>
+          <td class="px-4 py-2 border-b border-emerald-500/20">0</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2 border-b border-emerald-500/20">A</td>
+          <td class="px-4 py-2 border-b border-emerald-500/20">2</td>
+          <td class="px-4 py-2 border-b border-emerald-500/20">0</td>
+          <td class="px-4 py-2 border-b border-emerald-500/20">2</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2 border-b border-emerald-500/20">B</td>
+          <td class="px-4 py-2 border-b border-emerald-500/20">4</td>
+          <td class="px-4 py-2 border-b border-emerald-500/20">0</td>
+          <td class="px-4 py-2 border-b border-emerald-500/20">0</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2 border-b border-emerald-500/20">C</td>
+          <td class="px-4 py-2 border-b border-emerald-500/20">4</td>
+          <td class="px-4 py-2 border-b border-emerald-500/20">2</td>
+          <td class="px-4 py-2 border-b border-emerald-500/20">5</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2 border-b border-emerald-500/20">D</td>
+          <td class="px-4 py-2 border-b border-emerald-500/20">5</td>
+          <td class="px-4 py-2 border-b border-emerald-500/20">4</td>
+          <td class="px-4 py-2 border-b border-emerald-500/20">4</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2 border-b border-emerald-500/20">E</td>
+          <td class="px-4 py-2 border-b border-emerald-500/20">6</td>
+          <td class="px-4 py-2 border-b border-emerald-500/20">9</td>
+          <td class="px-4 py-2 border-b border-emerald-500/20">9</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2">Vége</td>
+          <td class="px-4 py-2">-</td>
+          <td class="px-4 py-2">15</td>
+          <td class="px-4 py-2">15</td>
+        </tr>
+        </tbody>
+      </table>
+
+      <div class="source mt-8">
+        <p class="text-zinc-400">Források:</p>
+        <a href="https://www.oplit.com/en/articles/la-methode-des-potentiels-metra-mpm" class="text-emerald-400 hover:underline">MPM módszer részletes leírása</a><br>
+        <a href="https://www.nive.hu/Downloads/Szakkepzesi_dokumentumok/Bemeneti_kompetenciak_meresi_ertekelesi_eszkozrendszerenek_kialakitasa/4_0688_020_101015.pdf" class="text-emerald-400 hover:underline">Szakképzési anyagok</a>
+        <p class="text-zinc-400 mt-2">Készült: 2024. március 3.</p>
+      </div>
     </div>
+  </div>
+</main>
 </body>
-<script src="script.js"></script>
 </html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kockázatelemzés</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;800&family=Flow+Circular&display=swap" rel="stylesheet">
+  <style>
+    .glow-card {
+      box-shadow: 0 0 40px -15px rgba(110, 231, 183, 0.3);
+    }
+  </style>
+</head>
+<body class="bg-zinc-900">
+<nav class="fixed top-0 w-full z-50 bg-zinc-800/80 backdrop-blur-md border-b border-emerald-500/20">
+  <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-2 ml-auto pr-4">
+      <div class="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></div>
+      <span class="font-['Exo_2'] text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-cyan-400">
+        numONE
+      </span>
+    </div>
+    <div class="hidden md:flex gap-6">
+      <a href="index.html" class="text-zinc-300 hover:text-emerald-400 transition-colors font-['Exo_2'] font-medium whitespace-nowrap">Kezdőlap</a>
+      <a href="cpm.html" class="text-zinc-300 border-b-2 border-emerald-400 hover:text-emerald-400 transition-colors font-['Exo_2'] font-medium whitespace-nowrap">CPM</a>
+      <a href="mpm.html" class="text-emerald-400 whitespace-nowrap">MPM</a>
+      <a href="kockazatelemzes.html" class="text-zinc-300 hover:text-emerald-400 transition-colors font-['Exo_2'] font-medium whitespace-nowrap">Kockázatelemzés</a>
+      <a href="koltsegek_becslese.html" class="text-zinc-300 hover:text-emerald-400 transition-colors font-['Exo_2'] font-medium whitespace-nowrap">Költségek Becslése</a>
+      <a href="projektdokumentacio.html" class="text-zinc-300 hover:text-emerald-400 transition-colors font-['Exo_2'] font-medium whitespace-nowrap">Projektdokumentáció</a>
+      <a href="projekt_egyensuly.html" class="text-zinc-300 hover:text-emerald-400 transition-colors font-['Exo_2'] font-medium whitespace-nowrap">Projekt egyensúly</a>
+    </div>
+  </div>
+</nav>
+<main class="relative z-10 container mx-auto px-6 pt-24 pb-16">
+  <div class="max-w-5xl mx-auto">
+    <div class="mb-16 text-center">
+      <h1 class="text-5xl md:text-6xl font-['Exo_2'] font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-cyan-400 mb-6">
+        CPM
+      </h1>
+      <p class="text-zinc-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+        DSzC Mechwart András Gépipari és Informatikai Technikum
+      </p>
+    </div>
+    <div class="glow-card bg-zinc-800/60 p-8 rounded-3xl border border-emerald-500/20 hover:border-emerald-400/40 transition-all">
+      <div class="a5-container">
+        <h1 class="text-3xl font-bold text-emerald-300 mb-4">Hálótervezés - CPM Összefoglaló</h1>
+
+        <h2 class="text-2xl font-semibold text-emerald-300 mb-2">Előnyök</h2>
+        <ul class="list-disc list-inside text-zinc-300 mb-4">
+          <li>Bonyolult folyamatok áttekinthető szervezése</li>
+          <li>Hatékony idő- és erőforrás-kezelés</li>
+          <li>Kritikus út azonosítása</li>
+        </ul>
+
+        <h2 class="text-2xl font-semibold text-emerald-300 mb-2">Alapelvek</h2>
+        <div class="principles mb-4">
+          <h3 class="text-xl font-semibold text-emerald-300 mb-2">Tevékenység</h3>
+          <ul class="list-disc list-inside text-zinc-300 mb-4">
+            <li>Időigényes részfeladat (pl. 2 hét)</li>
+            <li>Jele: nyíl <span class="special-arrow">→</span></li>
+            <li>Erőforrásokat igényel</li>
+          </ul>
+
+          <h3 class="text-xl font-semibold text-emerald-300 mb-2">Esemény</h3>
+          <ul class="list-disc list-inside text-zinc-300 mb-4">
+            <li>Kör vagy négyzet jelölés</li>
+            <li>Időpontot jelöl (pl. kezdés/befejezés)</li>
+            <li>Nincs erőforrásigénye</li>
+          </ul>
+
+          <h3 class="text-xl font-semibold text-emerald-300 mb-2">Látszat-tevékenység</h3>
+          <ul class="list-disc list-inside text-zinc-300 mb-4">
+            <li>Szaggatott nyíl <span class="special-arrow">- - ></span></li>
+            <li>Logikai kapcsolatot jelez</li>
+            <li>Nincs idő- vagy erőforrásigény</li>
+          </ul>
+        </div>
+
+        <h2 class="text-2xl font-semibold text-emerald-300 mb-2">Szerkesztési szabályok</h2>
+        <ul class="list-disc list-inside text-zinc-300 mb-4">
+          <li>Csak egy tevékenység köthet két eseményt</li>
+          <li>Hurokmentes struktúra</li>
+          <li>Növekvő számozású események</li>
+          <li>Egy kezdő- és végpont</li>
+        </ul>
+
+        <h2 class="text-2xl font-semibold text-emerald-300 mb-2">Műveleti táblázat példa</h2>
+        <table class="min-w-full bg-zinc-800 text-zinc-300 border border-emerald-500/20">
+          <thead>
+          <tr>
+            <th class="px-4 py-2 border-b border-emerald-500/20">Esemény</th>
+            <th class="px-4 py-2 border-b border-emerald-500/20">Tevékenység (idő)</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td class="px-4 py-2 border-b border-emerald-500/20">1 → 2</td>
+            <td class="px-4 py-2 border-b border-emerald-500/20">A (1 nap)</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 border-b border-emerald-500/20">2 → 3</td>
+            <td class="px-4 py-2 border-b border-emerald-500/20">B (2 nap)</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 border-b border-emerald-500/20">3 → 4</td>
+            <td class="px-4 py-2">C (4 nap)</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
