@@ -13,15 +13,24 @@
     </style>
 </head>
 <body class="bg-zinc-900">
-<nav class="fixed top-0 w-full z-50 bg-zinc-800/80 backdrop-blur-md border-b border-emerald-500/20">
-    <div class="container mx-auto px-6 py-4 flex items-center justify-between">
-        <div class="flex items-center gap-2 ml-auto pr-4">
+    <nav class="fixed top-0 w-full z-50 bg-zinc-800/80 backdrop-blur-md border-b border-emerald-500/20">
+        <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+          <div class="flex items-center gap-2">
             <div class="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></div>
             <span class="font-['Exo_2'] text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-cyan-400">
-                numONE
+              numONE
             </span>
-        </div>
-        <div class="hidden md:flex gap-6">
+          </div>
+      
+          <div class="md:hidden">
+            <button id="menu-toggle" class="text-zinc-300 hover:text-emerald-400 focus:outline-none">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+              </svg>
+            </button>
+          </div>
+      
+          <div id="nav-links" class="hidden md:flex gap-6">
             <a href="index.html" class="text-zinc-300 hover:text-emerald-400 transition-colors font-['Exo_2'] font-medium whitespace-nowrap">Kezdőlap</a>
             <a href="cpm.html" class="text-zinc-300 hover:text-emerald-400 transition-colors font-['Exo_2'] font-medium whitespace-nowrap">CPM</a>
             <a href="mpm.html" class="text-zinc-300 hover:text-emerald-400 transition-colors font-['Exo_2'] font-medium whitespace-nowrap">MPM</a>
@@ -29,9 +38,9 @@
             <a href="koltsegek_becslese.html" class="text-zinc-300 hover:text-emerald-400 transition-colors font-['Exo_2'] font-medium whitespace-nowrap">Költségek Becslése</a>
             <a href="projektdokumentacio.html" class="text-zinc-300 border-b-2 border-emerald-400 hover:text-emerald-400 transition-colors font-['Exo_2'] font-medium whitespace-nowrap">Projektdokumentáció</a>
             <a href="projekt_egyensuly.html" class="text-zinc-300 hover:text-emerald-400 transition-colors font-['Exo_2'] font-medium whitespace-nowrap">Projekt egyensúly</a>
+          </div>
         </div>
-    </div>
-</nav>
+      </nav>
 <main class="relative z-10 container mx-auto px-6 pt-24 pb-16">
     <div class="mb-16 text-center">
         <h1 class="text-5xl md:text-6xl font-['Exo_2'] font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-cyan-400 mb-6">
